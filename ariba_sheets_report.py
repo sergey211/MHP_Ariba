@@ -89,7 +89,6 @@ print('https://docs.google.com/spreadsheets/d/' + spreadsheet_id)
 
 column_index = 3  # Индекс столбца (начиная с 1)
 column_values = worksheet.get_col(column_index)
-
 limited_values = column_values[1:27]
 
 # Вывод данных в консоль

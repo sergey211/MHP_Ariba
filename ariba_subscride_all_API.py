@@ -3,7 +3,7 @@ from requests.structures import CaseInsensitiveDict
 
 import config
 
-url = config.ariba_url+"tenders/add_categories_to_tg_user/?username=Serzhioo"
+url = config.ariba_url+"tenders/add_categories_to_tg_user/?username="+config.username
 
 headers = CaseInsensitiveDict()
 headers["accept"] = "application/json"
