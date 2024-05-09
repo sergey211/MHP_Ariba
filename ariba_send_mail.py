@@ -12,7 +12,6 @@ chrome_options.add_experimental_option('detach', True)
 driver = webdriver.Chrome(options=chrome_options)
 
 subject = ''
-# text_letter = 'на что я подписан?'
 # text_letter =  "Могу ли я зарегистрироваться как поставщик?",
 # text_letter = "Я регистрируюсь и появляется красная кнопка с надписью 'caravan', что делать?",
 # text_letter = "Расскажи как проходит процедура закупок",

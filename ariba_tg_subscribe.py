@@ -75,7 +75,7 @@ def find_tenders():
     # chrome_options.add_experimental_option('detach', True)
     chrome_options.add_argument('headless')
     driver = webdriver.Chrome(options=chrome_options)
-    driver.get("https://mhp.com.ua/uk/partners/tendery")
+    driver.get(config.base_url+"/tendery")
     driver.find_element(By.XPATH, "//button[contains(@class,'btn1-bord ')]").click()
     btns = driver.find_elements(By.XPATH, "//button[text()='75']")
     driver.execute_script("arguments[0].click();", btns[0])

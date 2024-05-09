@@ -4,10 +4,10 @@ from requests.structures import CaseInsensitiveDict
 
 
 def reset_tokens_api():
-    url = config.ariba_url + "tenders/reset_tokens/?user_type=TELEGRAM&username=Serzhioo"
+    url = config.ariba_url + "tenders/reset_tokens/?user_type=TELEGRAM&username="+config.username
     headers = CaseInsensitiveDict()
     headers["Content-Type"] = "application/json"
-    data = '{"user_type": "TELEGRAM", "username": "Serzhioo"}'
+    data = '{"user_type": "TELEGRAM", "username": '+config.username+'}'
     resp = requests.post(url, headers=headers, data=data, verify=False)
     print()
     print(resp.text)
@@ -15,7 +15,7 @@ def reset_tokens_api():
 
 
 def clear_categories():
-    url = config.ariba_url + "tenders/clear_categories_and_watched_tenders_for_user/?username=Serzhioo" \
+    url = config.ariba_url + "tenders/clear_categories_and_watched_tenders_for_user/?username="+config.username+ \
                              "&user_type=TELEGRAM"
 
     headers = CaseInsensitiveDict()
@@ -36,7 +36,7 @@ def reset_history():
         headers = {
             "Content-Type": "application/json",
         }
-        url = config.ariba_url + "tenders/reset_user_history/?username=Serzhioo&user_type=TELEGRAM"
+        url = config.ariba_url + "tenders/reset_user_history/?username="+config.username+"&user_type=TELEGRAM"
         data = '{"user_type": "TELEGRAM", "username": "Serzhioo"}'
         resp = requests.post(url, headers=headers, data=data, verify=False)
         print()

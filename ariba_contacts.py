@@ -11,7 +11,7 @@ api_hash = config.api_hash
 
 
 def make_reset():
-    url = "https://ariba.gart.technology/tenders/reset_user_history/?username=Serzhioo&user_type=TELEGRAM"
+    url = config.ariba_url+"/tenders/reset_user_history/?username=Serzhioo&user_type=TELEGRAM"
     headers = CaseInsensitiveDict()
     headers["Content-Type"] = "application/json"
     data = '{"user_type": "TELEGRAM", "username": "Serzhioo"}'

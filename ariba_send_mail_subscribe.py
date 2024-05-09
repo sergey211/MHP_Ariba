@@ -16,7 +16,7 @@ categ = ''
 
 def find_tenders_mail():
     print("find tenders mail")
-    driver.get("https://mhp.com.ua/uk/partners/tendery")
+    driver.get(config.ariba_url+"/tendery")
     driver.find_element(By.XPATH, "//button[contains(@class,'btn1-bord ')]").click()
     btns = driver.find_elements(By.XPATH, "//button[text()='75']")
     driver.execute_script("arguments[0].click();", btns[0])
